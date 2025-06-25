@@ -1,6 +1,7 @@
 package com.xvclemente.dnd.dtos.events;
 
-import java.util.List;
+import java.util.Map;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
@@ -10,7 +11,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class ParticipantesListosParaAventuraEvent {
     private String adventureId; // El ID de la aventura original de MS1
-    private List<String> characterIds; // Lista de IDs de los PJs que se unen
-    private List<String> enemyIds; // Lista de IDs de los ENs que participarán
+    private Map<String, CombatantStatsDto> characters;
+    private Map<String, CombatantStatsDto> enemies;
 
 }
